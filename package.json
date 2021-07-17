@@ -1,0 +1,23 @@
+{
+  "name": "index.js",
+  "version": "1.0.0",
+  "description": "movie app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericstewart970/movieapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericstewart970/movieapp/issues"
+  },
+  "homepage": "https://github.com/ericstewart970/movieapp#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0"
+  }
+}
