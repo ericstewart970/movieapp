@@ -7,52 +7,72 @@ let topTen = [
 
   //1
   {
-    title: 'Happy Gilmore'
+    title: 'Happy Gilmore',
+    Director:'',
+    Genra:''
   },
 
   //2
   {
-    title: 'Billy Madison'
+    title: 'Billy Madison',
+    Director:'',
+    Genra:''
   },
 
   //3
   {
-    title: '8 Mile'
+    title: '8 Mile',
+    Director:'',
+    Genra:''
   },
 
   //4
   {
-    title: 'Get Rich or Die Tryin'
+    title: 'Get Rich or Die Tryin',
+    Director:'',
+    Genra:''
   },
 
   //5
   {
-    title: 'The Wolf of Wall Street'
+    title: 'The Wolf of Wall Street',
+    Director:'',
+    Genra:''
   },
 
   //6
   {
-    title: 'Aviator'
+    title: 'Aviator',
+    Director:'',
+    Genra:''
   },
 
   //7
   {
-    title: 'The Fast and the Furious'
+    title: 'The Fast and the Furious',
+    Director:'',
+    Genra:''
   },
 
   //8
   {
-    title: 'Caddyshack'
+    title: 'Caddyshack',
+    Director:'',
+    Genra:''
   },
 
   //9
   {
-    title: 'Blazing Saddles'
+    title: 'Blazing Saddles',
+    Director:'',
+    Genra:''
   },
 
   //10
   {
-    title: 'American Pie'
+    title: 'American Pie',
+    Director:'',
+    Genra:''
   },
 ];
 
@@ -64,8 +84,14 @@ app.get('/', (req, res) => {
 
 app.use(express.static('public'));
 
+
 app.get('/movies', (req, res) => {
   res.json(topTen);
+});
+
+app.get('/movies/:title', (req, res) => {
+  res.json(topTen.find((title) =>
+    { return movie.title === req.params.title }));
 });
 
 app.use((err, req, res, next) => {
