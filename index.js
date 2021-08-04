@@ -84,14 +84,15 @@ app.get('/', (req, res) => {
 
 app.use(express.static('public'));
 
-
+// gets all the movies (my top ten)
 app.get('/movies', (req, res) => {
   res.json(topTen);
 });
 
+// gets single movie info
 app.get('/movies/:title', (req, res) => {
-  res.json(topTen.find((title) =>
-    { return movie.title === req.params.title }));
+  res.json(topTen.find( (movie) =>
+    { return topTen.title === req.params.title }));
 });
 
 app.use((err, req, res, next) => {
