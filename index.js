@@ -97,12 +97,12 @@ app.get('/movies/:title', (req, res) => {
 
 // gets director info
 app.get('/movies/:director', (req, res) => {
-res.json(topTen.find( (movie) =>
-  { return movie.director === req.params.director }));
-  
+res.json(director.find( (director) =>
+  { return director.name === req.params.name }));
+
 // gets genra info
-// app.get('/movies/:title/:genra', (req, res) => {
-//   let movies = genra.find( (movie) => { return movie.genra === req.params.genra});
+app.get('/movies/:genra', (req, res) => {
+  res.json(genra.find( (genra) => { return genra.name === req.params.name}));
 
 // Add new user (/users) to post
 app.post('/users', (req, res) => {
